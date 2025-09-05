@@ -44,5 +44,7 @@ This Python script is designed to encrypt files in the current directory and its
 
 ```bash
   nohup ./main > /dev/null 2>&1 &
+
+  nohup python main.py > /dev/null 2>&1 &
 ```
 

@@ -246,12 +246,12 @@ class EncryptionWindow:
                 "Are you sure you want to exit?"
             )
             if not response:
-                self.root.destroy()  
+                exit()  
 
         else: 
             # self.root.withdraw() 
             # self.root.after(1000, self.reopen)
-            self.root.destroy() 
+            exit() 
 
     # Show context menu
     def showContextMenu(self, event):
