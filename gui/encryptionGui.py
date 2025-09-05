@@ -221,7 +221,8 @@ class EncryptionWindow:
                     progressPercent = (decryptedCount / totalFiles) * 100
                     self.progressBar['value'] = decryptedCount
                     self.percentageLabel.config(text=f"{progressPercent:.1f}%")
-                    self.statusLabel.config(text=f"Decrypted {decryptedCount} of {totalFiles} files")
+                    # self.statusLabel.config(text=f"Decrypted {decryptedCount} of {totalFiles} files")
+                    self.statusLabel.config(text="Files Decrypted 100%, exit the application... ")
                     self.root.update_idletasks()
 
                     # Change directory 
@@ -246,7 +247,10 @@ class EncryptionWindow:
                 "Are you sure you want to exit?"
             )
             if not response:
-                exit()  
+                exit()
+
+            else:
+                exit()   
 
         else: 
             # self.root.withdraw() 
