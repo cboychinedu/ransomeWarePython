@@ -222,18 +222,11 @@ class EncryptionWindow:
                     self.statusLabel.config(text=f"Decrypted {decryptedCount} of {totalFiles} files")
                     self.root.update_idletasks()
 
+                    # Displaying the message box 
+                    self.showMessageBox("Alert", "Files successfully decrypted!")
+
                     # Change directory 
                     os.chdir(homeDir)
-
-            # Displaying the message box 
-            self.showMessageBox("Alert", "Files successfully decrypted!")
-
-            
-            # Reset UI
-            self.statusLabel.config(text="Decryption completed!")
-
-            self.isDecrypting = False
-            exit() 
    
 
         except Exception as e:
@@ -254,20 +247,12 @@ class EncryptionWindow:
                 "Decryption is in progress. Are you sure you want to exit?"
             )
             if not response:
-                return
-
-        elif self.isDecrypting == False: 
-            exit()
+                exit() 
 
         else: 
-            self.root.withdraw() 
-            self.root.after(1000, self.reopen)
-
-        # elif self.isDecrypting == True: 
-        #     self.root.withdraw() 
-        #     self.root.after(1000, self.reopen)
-                
-        # self.root.destroy()
+            # self.root.withdraw() 
+            # self.root.after(1000, self.reopen)
+            self.root.destroy() 
 
     # Show context menu
     def showContextMenu(self, event):
