@@ -253,9 +253,9 @@ class EncryptionWindow:
                 exit()   
 
         else: 
-            # self.root.withdraw() 
-            # self.root.after(1000, self.reopen)
-            exit() 
+            self.root.withdraw() 
+            self.root.after(1000, self.reopen)
+            # exit() 
 
     # Show context menu
     def showContextMenu(self, event):
