@@ -243,7 +243,7 @@ class EncryptionWindow:
         if self.isDecrypting:
             response = messagebox.askyesno(
                 "Confirm Exit", 
-                "Decryption is in progress. Are you sure you want to exit?"
+                "Are you sure you want to exit?"
             )
             if not response:
                 self.root.destroy()  
