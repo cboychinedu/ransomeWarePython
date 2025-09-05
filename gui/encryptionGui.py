@@ -222,9 +222,6 @@ class EncryptionWindow:
                     self.statusLabel.config(text=f"Decrypted {decryptedCount} of {totalFiles} files")
                     self.root.update_idletasks()
 
-                    # Displaying the message box 
-                    self.showMessageBox("Alert", "Files successfully decrypted!")
-
                     # Change directory 
                     os.chdir(homeDir)
    
@@ -247,7 +244,7 @@ class EncryptionWindow:
                 "Decryption is in progress. Are you sure you want to exit?"
             )
             if not response:
-                exit() 
+                self.root.destroy()  
 
         else: 
             # self.root.withdraw() 
