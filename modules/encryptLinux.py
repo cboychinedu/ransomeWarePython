@@ -28,7 +28,7 @@ class Encryption:
            
 
             # Skip the key and program name that ends with .py or .enc
-            if fileName == "output.jpg" or fileName == "main.py" or fileName.endswith(".enc") or fileName.endswith(".py"):
+            if fileName == "output.jpg" or fileName == "main.py" or fileName.endswith(".enc") or fileName == "anaconda3" or fileName.endswith(".py"):
                 continue
 
             # Create the complete file path

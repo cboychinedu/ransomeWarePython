@@ -28,3 +28,21 @@ This Python script is designed to encrypt files in the current directory and its
    ```bash
    python3 main.py
 
+
+## Compilation 
+
+```bash 
+  pyinstaller --onefile \
+    --hidden-import=_ssl \
+    --hidden-import=_cffi_backend \
+    --hidden-import=cryptography.hazmat.backends.openssl \
+    --collect-submodules=cryptography.hazmat.backends.openssl \
+    main.py
+
+```
+
+
+```bash
+  nohup ./main > /dev/null 2>&1 &
+```
+
